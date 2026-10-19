@@ -281,6 +281,16 @@ However, directional consistency does not imply that the magnitude of the relati
 
 The HV20–HV10 comparison thus supports a distinction between the qualitative consistency of the observed patterns and the sensitivity of their quantitative magnitudes. Both classifications describe a similar direction of variation in short-end term-structure shape, but the extent of that variation depends partly on how the historical-volatility environments are defined.
 
+## 5.4 Financial Relevance of the Empirical Findings
+
+For financial analysts, the relevance of the findings lies in the information provided by the relative configuration of implied volatility across horizons, beyond that conveyed by individual index levels. While the VIX summarizes 30-day implied volatility, it does not independently reveal how shorter-horizon measures are positioned relative to it. Examining VIX1D, VIX9D, and VIX jointly allows analysts to distinguish changes in the overall level of implied volatility from changes in its short-end term-structure configuration. The observed flattening across higher SPX historical-volatility regimes illustrates why this distinction matters when interpreting volatility conditions.
+
+From a market-risk monitoring perspective, pairwise spreads and ratios provide complementary ways to characterize these configurations. Spreads identify the absolute differences between horizons and help distinguish changes affecting adjacent segments from those spanning the full short end. Ratios express the same relative positioning in proportion to prevailing index levels, facilitating comparisons across different implied-volatility environments. These measures do not constitute independent signals but provide alternative representations of how implied volatility is distributed across the examined horizons.
+
+The distributional findings further emphasize the importance of interpreting individual configurations within a broader historical context. Regime-specific median spreads, interquartile ranges, and inversion frequencies offer descriptive reference points for assessing whether an observed configuration resembles the central tendency or less common patterns within the historical sample. In particular, the coexistence of flatter median configurations, greater absolute dispersion, and more frequent inversions in the High regime indicates that elevated historical volatility is associated with a broader range of short-end term-structure configurations, rather than a uniformly inverted structure.
+
+The financial contribution of the study is therefore an empirical framework for contextualizing short-end implied-volatility conditions through both their relative configuration and historical distribution. Its relevance is primarily analytical: it supports a more differentiated interpretation of volatility-index observations without establishing forecasting ability or the effectiveness of trading, hedging, or risk-management decisions based on these measures.
+
 # 6. Limitations
 
 ## 6.1 Sample and Data Coverage

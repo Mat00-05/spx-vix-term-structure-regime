@@ -94,9 +94,7 @@ Additional HV10 figures and spread-distribution boxplots are available in [`Figu
 ├── chicago-fullnote-bibliography.csl
 ├── README.md
 └── .gitignore
-```
-
-[Download the analysis workbook](SPX%20VIX%20Term%20Structure%20Public%20Analysis.xlsx)
+``` 
 
 ## Data Sources
 
