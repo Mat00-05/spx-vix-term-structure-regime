@@ -326,12 +326,11 @@ The observational design does not establish whether SPX historical volatility di
 # 7. Conclusion
 
 This study examined how the VIX1D–VIX9D–VIX implied-volatility term structure varies across Low, Normal, and High SPX historical-volatility regimes over a sample of 918 trading sessions. Under both HV20 and HV10 classifications, higher historical-volatility regimes are associated with higher implied-volatility levels and less negative median pairwise spreads, indicating a progressively flatter short-end term structure. However, median spreads remain negative across all regimes and segments, indicating that each pairwise segment retains an upward-sloping central tendency rather than an inverted one.
-
 Beyond changes in central tendency, the analysis documents larger interquartile ranges of spreads in the High regime and more frequent pairwise and full inversions. These findings jointly characterize changes in the position, dispersion, and inversion frequencies of the observed term-structure distributions. They provide complementary descriptions of the same underlying volatility-index configurations rather than statistically independent evidence.
 
 The comparison between HV20 and HV10 shows that the direction of all six median spread contrasts relative to the Normal regime is preserved across classifications, together with the principal descriptive patterns. Nevertheless, several contrasts differ in magnitude, indicating that the quantitative characterization of term-structure differences is sensitive to the historical-volatility window used to define regimes.
 
-Overall, the study documents a descriptive association between SPX historical-volatility regimes and the relative configuration of short- and longer-horizon implied volatility within the observed sample. These findings do not establish causal mechanisms, predictive relationships, or general validity beyond the period and regime definitions examined.
+Overall, the study documents a descriptive association between SPX historical-volatility regimes and the relative configuration of short- and longer-horizon implied volatility within the observed sample. From a market-analysis perspective, these results highlight the value of examining the configuration of implied volatility across horizons alongside its overall level, while leaving the prospective usefulness of these relationships untested. These findings do not establish causal mechanisms, predictive relationships, or general validity beyond the period and regime definitions examined.
 
 \clearpage
 
