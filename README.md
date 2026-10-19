@@ -94,19 +94,29 @@ Additional HV10 figures and spread-distribution boxplots are available in [`Figu
 ├── chicago-fullnote-bibliography.csl
 ├── README.md
 └── .gitignore
-``` 
+```
 
-## Data Sources
+## Public Analysis Workbook
 
-The analysis uses publicly available data from:
+📊 [**Download the Excel Analysis Workbook (.xlsx)**](SPX%20VIX%20Term%20Structure%20Public%20Analysis.xlsx)
 
-- **Cboe Global Markets** — VIX1D, VIX9D, and VIX
-- **Federal Reserve Bank of St. Louis (FRED)** — S&P 500 Index (SP500)
+The accompanying Excel workbook provides a structured record of the descriptive statistics reported in the paper, allowing readers to inspect the numerical results, variable definitions, methodological conventions, and data sources underlying the analysis.
 
-Full citations and source links are reported in the paper.
+The workbook contains eight worksheets:
 
-## Scope
+- **Project Guide:** study overview, workbook organization, and correspondence between the reported results and the paper.
+- **Regime Summary:** HV20/HV10 thresholds, sample composition, regime persistence, and average implied-volatility levels.
+- **Spread Statistics:** descriptive distributions of pairwise term-structure spreads across historical-volatility regimes.
+- **Ratios and Slopes:** scale-relative measures and horizon-normalized representations of term-structure shape.
+- **Inversion Frequencies:** pairwise and full inversion frequencies under both historical-volatility classifications.
+- **Sensitivity Contrasts:** observed differences in median spreads relative to the Normal regime under HV20 and HV10.
+- **Data Dictionary:** definitions of the variables and measures used in the analysis, including calculation and interpretation conventions.
+- **Sources:** documentation of the original data sources and relevant publication notes.
 
-This is an empirical market-analysis project focused on the relationship between SPX historical-volatility regimes and the configuration of the VIX short-end implied-volatility term structure.
+### Data Availability and Reproducibility
 
-The analysis is descriptive within the observed sample and is not intended as a trading strategy or causal model.
+The public workbook contains the aggregated analytical results rather than the original daily SPX and Cboe volatility-index observations. The underlying data sources are documented in both the workbook and the accompanying paper.
+
+The workbook supports transparent inspection and comparison of the reported statistics, but it does not constitute a complete executable replication of the analysis from the original daily observations.
+
+The analysis is descriptive and does not establish statistical significance, predictive relationships, or causal effects.
