@@ -1,89 +1,96 @@
 # SPX Historical-Volatility Regimes and the VIX Short-End Term Structure
 
-Empirical analysis of how the VIX1D–VIX9D–VIX implied-volatility term structure varies across Low, Normal, and High historical-volatility regimes of the S&P 500.
+A descriptive empirical study of how the **VIX1D–VIX9D–VIX implied-volatility term structure** varies across Low, Normal, and High historical-volatility regimes of the S&P 500 (SPX).
 
 **Author:** Mattia Mancinelli  
-**Sample:** January 2023 – September 2026  
-**Observations:** 918 trading sessions
+**Analytical sample:** February 1, 2023 – September 29, 2026  
+**Observations:** 918 trading sessions  
+**Approach:** Descriptive regime comparison and sensitivity analysis
 
 ## Research Question
 
 > How does the VIX1D–VIX9D–VIX implied-volatility term structure vary across Low, Normal, and High SPX historical-volatility regimes?
 
-## Overview
+## Study Design
 
-The project studies the short end of the VIX term structure using three Cboe implied-volatility indices:
+The analysis considers three Cboe indices representing the short end of the SPX option-implied volatility term structure:
 
-- **VIX1D** — approximately 1-day expected volatility
-- **VIX9D** — approximately 9-day expected volatility
-- **VIX** — approximately 30-day expected volatility
+- **VIX1D:** approximately one-day implied volatility
+- **VIX9D:** approximately nine-day implied volatility
+- **VIX:** approximately 30-day implied volatility
 
-Market regimes are defined independently from these indices using rolling historical volatility of daily S&P 500 returns.
+Market regimes are classified using **historical volatility calculated from SPX daily close-to-close log returns**, rather than from the implied-volatility indices. The baseline specification uses rolling 20-session historical volatility (**HV20**); a rolling 10-session measure (**HV10**) provides an alternative regime classification for descriptive sensitivity analysis. Both measures are annualized using a factor of √252.
 
-The baseline classification uses **20-session historical volatility (HV20)**, while **10-session historical volatility (HV10)** is used as an alternative specification for robustness analysis.
+Regime thresholds are defined separately for each measure using the 25th and 75th percentiles of the common analytical sample:
 
-## Methodology
+| Classification | Low / Normal threshold (P25) | Normal / High threshold (P75) |
+| -------------- | ---------------------------- | ----------------------------- |
+| HV20 | 10.16% | 14.58% |
+| HV10 | 9.42% | 14.95% |
 
-SPX daily log returns are used to calculate annualized HV20 and HV10.
+For each classification, the sample contains **230 Low, 458 Normal, and 230 High** observations. These regimes are retrospective and relative to the sample; they are not universal volatility-state thresholds.
 
-For each historical-volatility measure, observations are classified into:
+## Empirical Methodology
 
-- **Low:** below the 25th percentile
-- **Normal:** between the 25th and 75th percentiles
-- **High:** above the 75th percentile
+Term-structure shape is examined through:
 
-The VIX short-end term structure is then examined through:
+- **Pairwise spreads:** VIX1D − VIX9D (1D–9D), VIX9D − VIX (9D–30D), and VIX1D − VIX (1D–30D)
+- **Ratios:** scale-relative comparisons of implied-volatility index levels
+- **Horizon-normalized slopes:** descriptive transformations of the corresponding spreads
+- **Spread distributions:** means, medians, quartiles, and interquartile ranges (IQRs)
+- **Inversion frequencies:** the share of sessions with positive pairwise spreads, and full inversions defined by VIX1D > VIX9D > VIX
 
-- 1D–9D, 9D–30D, and 1D–30D spreads
-- Term-structure ratios
-- Horizon-normalized slopes
-- Distributional dispersion
-- Pairwise and full inversion frequencies
+The primary comparisons use **median spread differences relative to the Normal regime** (Low − Normal and High − Normal). The same descriptive analysis is repeated under HV10 to assess sensitivity to the historical-volatility window.
 
-Statistical inference is restricted to differences in median spreads and uses a **Moving Block Bootstrap with 10,000 replications and 10-session blocks**.
+**This study does not use hypothesis tests, bootstrap inference, or confidence intervals.** The reported contrasts describe the observed sample rather than statistically established population relationships.
 
 ## Main Findings
 
-The analysis documents a consistent descriptive relationship between SPX historical-volatility regimes and the VIX short-end term structure.
+Across both HV20 and HV10 classifications:
 
-As historical-volatility regimes move from Low to High:
+1. **Implied-volatility levels are higher in higher historical-volatility regimes.** The increases are larger at shorter horizons.
+2. **Median pairwise spreads become less negative from Low to High.** This indicates a flatter short-end term structure, although the median of every pairwise spread remains negative in every regime.
+3. **The High regime has the largest IQR for each spread.** This indicates greater absolute dispersion in the central half of the spread distributions, without implying that dispersion increases at every intermediate regime transition.
+4. **Pairwise and full inversions become more frequent.** Nevertheless, each inversion frequency remains below 50% in every regime.
+5. **All six median spread contrasts retain their signs across HV20 and HV10.** Several contrasts differ in magnitude, so directional consistency does not imply quantitative invariance across classification methods.
 
-- VIX1D, VIX9D, and VIX levels increase.
-- Differences between short- and longer-horizon implied volatility narrow.
-- The short-end term structure becomes progressively flatter.
-- Spread distributions become wider in the High regime.
-- Pairwise and full inversions become more frequent.
+Selected results for the baseline **HV20** specification illustrate the observed differences:
 
-The direction of these patterns is preserved under both HV20 and HV10.
+| Measure | Low regime | High regime |
+| ------- | ---------- | ----------- |
+| Median 1D–30D spread (index points) | −4.125 | −2.420 |
+| 1D–30D inversion frequency | 6.52% | 24.35% |
+| Full inversion frequency | 2.17% | 11.74% |
 
-Inferential evidence is less uniform. Under the baseline HV20 classification, only one of six median-spread confidence intervals excludes zero, compared with five of six under HV10. This difference does not establish that HV10 is statistically superior.
+The flattening of median spreads, widening of IQRs, and higher inversion frequencies describe **different features of related distributions**, not independent empirical confirmations.
 
-The results document an association within the observed sample and do not establish a causal mechanism.
+## Full Paper
 
-## Paper
+📄 [**Read the complete paper**](paper.pdf)
 
-📄 **[Read the full paper](paper.pdf)**
-
-The paper contains the complete methodology, empirical results, discussion, limitations, references, and appendix.
+The paper provides the data definitions, methodological choices, descriptive results, economic interpretation, limitations, references, and supplementary figures and statistics.
 
 ## Selected Figures
 
 ### Average VIX Short-End Term Structure — HV20
 
-![Average VIX short-end term structure under HV20 regimes](Figures/figure1a_term_structure_hv20.png)
+![Average VIX Short-End Term Structure — HV20](Figures/figure1a_term_structure_hv20.png)
 
-### Inversion Frequency — HV20
+### Inversion Frequencies — HV20
 
-![VIX term-structure inversion frequency under HV20 regimes](Figures/figure3a_inversion_frequency_hv20.png)
+![Inversion Frequencies — HV20](Figures/figure3a_inversion_frequency_hv20.png)
 
-## Repository Structure
+Additional HV10 figures and spread-distribution boxplots are available in [`Figures/`](Figures/).
+
+## Repository Contents
 
 ```text
 .
-├── Figures/                         # Figures used in the paper
-├── paper.pdf                        # Final paper
-├── paper.qmd                        # Quarto source document
-├── references.bib                  # Bibliographic database
+├── Figures/
+├── SPX VIX Term Structure Public Analysis.xlsx
+├── paper.pdf
+├── paper.qmd
+├── references.bib
 ├── chicago-fullnote-bibliography.csl
 ├── README.md
 └── .gitignore
