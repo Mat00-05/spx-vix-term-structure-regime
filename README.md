@@ -87,6 +87,8 @@ The paper contains the complete methodology, empirical results, discussion, limi
 ├── chicago-fullnote-bibliography.csl
 ├── README.md
 └── .gitignore
+``` 
+
 ## Data Sources
 
 The analysis uses publicly available data from:
