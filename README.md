@@ -87,3 +87,17 @@ The paper contains the complete methodology, empirical results, discussion, limi
 ├── chicago-fullnote-bibliography.csl
 ├── README.md
 └── .gitignore
+## Data Sources
+
+The analysis uses publicly available data from:
+
+- **Cboe Global Markets** — VIX1D, VIX9D, and VIX
+- **Federal Reserve Bank of St. Louis (FRED)** — S&P 500 Index (SP500)
+
+Full citations and source links are reported in the paper.
+
+## Scope
+
+This is an empirical market-analysis project focused on the relationship between SPX historical-volatility regimes and the configuration of the VIX short-end implied-volatility term structure.
+
+The analysis is descriptive and inferential within the observed sample and is not intended as a trading strategy or causal model.
