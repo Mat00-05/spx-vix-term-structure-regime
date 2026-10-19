@@ -102,4 +102,4 @@ Full citations and source links are reported in the paper.
 
 This is an empirical market-analysis project focused on the relationship between SPX historical-volatility regimes and the configuration of the VIX short-end implied-volatility term structure.
 
-The analysis is descriptive and inferential within the observed sample and is not intended as a trading strategy or causal model.
+The analysis is descriptive within the observed sample and is not intended as a trading strategy or causal model.
